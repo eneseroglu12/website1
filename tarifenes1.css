@@ -1,0 +1,207 @@
+
+/* Header */
+header {
+    background-color: #8c1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #8c1a1a;
+    margin-bottom: 10px;
+}
+.recipe-ingredients h4, .recipe-steps h4 {
+    color: #8c1a1a; /* Malzemeler ve Tarif başlıkları kırmızı */
+}
+section a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8c1a1a;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.recipe-details {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+section a:hover {
+    background-color: #b22a2a;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu düzen */
+    gap: 20px; /* Elemanlar arasındaki boşluk */
+    padding: 20px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 400px; /* Sabit yükseklik */
+    overflow: hidden;
+}
+
+.recipe-image {
+    width: 100%; /* Genişlik, kutuya göre ayarlanır */
+    max-width: 250px; /* Resimlerin maksimum genişliği */
+    height: 150px; /* Sabit yükseklik */
+    object-fit: cover; /* Resim, kutuya sığacak şekilde kesilir */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe h3 {
+    margin: 15px 0 10px;
+    color: #8c1a1a;
+    font-size: 1.2rem;
+}
+
+.recipe p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+/* Başlıklar ve Açıklamalar */
+.recipe-info h3 {
+    color: #8c1a1a; /* Başlıklar kırmızı */
+    font-size: 28px;
+    text-align: center;
+}
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+.description {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu düzen */
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-grid {
+        grid-template-columns: 1fr; /* Tek sütunlu düzen */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #8c1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .contact {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .recipe {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
